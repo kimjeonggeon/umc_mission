@@ -1,11 +1,11 @@
 package umc.spring.converter;
 
-import umc.spring.web.dto.TempResponse;
+import umc.spring.web.dto.temp.TempResponse;
 
 public class TempConverter {
     public static TempResponse.TempTestDTO toTempTestDTO(){
         return TempResponse.TempTestDTO.builder()
-                .testString("This is Test!")
+                .testString("success")
                 .build();
     }
     public static TempResponse.TempExceptionDTO toTempExceptionDTO(Integer flag){

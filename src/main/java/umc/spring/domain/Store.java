@@ -24,16 +24,13 @@ public class Store extends BaseEntity {
     private String address;
     @Column(nullable = false, precision = 3, scale = 2)
     private Float score;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "region_id")
     private Region region;
     @OneToMany(mappedBy = "store", cascade = CascadeType.ALL)
     private List<MemberMission> memberMissionList = new ArrayList<>();
     @OneToMany(mappedBy = "store", cascade = CascadeType.ALL)
     private List<Review> reviewList = new ArrayList<>();
-
-
-
 
     public void region(Region region){
         Optional.ofNullable(this.region)

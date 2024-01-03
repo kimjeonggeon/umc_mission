@@ -15,4 +15,13 @@ public class StoreRequestDTO {
         @NotBlank
         String body;
     }
+    @Getter
+    public static class MissionDTO{
+        @NotBlank
+        String title;
+        @NotNull
+        Float reward;
+        @NotBlank
+        String body;
+    }
 }

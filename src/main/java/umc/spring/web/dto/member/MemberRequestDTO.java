@@ -28,4 +28,22 @@ public class MemberRequestDTO {
         @ExistCategories
         List<Long> preferCategory;
     }
+    @Getter
+    public static class ReviewDTO{
+        @NotBlank
+        String title;
+        @NotNull
+        Float score;
+        @NotBlank
+        String body;
+    }
+    @Getter
+    public static class MissionDTO{
+        @NotBlank
+        String title;
+        @NotNull
+        Float reward;
+        @NotBlank
+        String body;
+    }
 }

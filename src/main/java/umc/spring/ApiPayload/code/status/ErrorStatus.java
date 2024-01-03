@@ -22,7 +22,13 @@ public enum ErrorStatus implements BaseErrorCode {
     //테스트 관련
     TEMP_EXCEPTION(HttpStatus.BAD_REQUEST,"TEMP4001","테스트입니다."),
 
+    // Mission relative exception
+    MISSION_NOT_FOUND(HttpStatus.NOT_FOUND, "MISSION4001", "미션이 존재하지 않습니다."),
 
+    // Review relative exception
+    REVIEW_NOT_FOUND(HttpStatus.NOT_FOUND, "REVIEW4001", "리뷰가 존재하지 않습니다."),
+    //페이지 관련 에러
+    PAGE_NUMBER_OUT_OF_RANGE(HttpStatus.BAD_REQUEST, "PAGE4001","페이지 번호는 1 이상이어야합니다."),
     // 멤버 관려 에러
     MEMBER_NOT_FOUND(HttpStatus.BAD_REQUEST, "MEMBER4001", "사용자가 없습니다."),
     NICKNAME_NOT_EXIST(HttpStatus.BAD_REQUEST, "MEMBER4002", "닉네임은 필수 입니다."),
